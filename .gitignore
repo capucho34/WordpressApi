@@ -1,0 +1,36 @@
+# WordPress core
+#/wp-admin/
+#/wp-includes/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backups/
+
+# Uploaded files (optional to track)
+#/wp-content/uploads/
+
+# Configuration
+#wp-config.php
+wp-config-sample.php
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Composer dependencies (if using Composer)
+vendor/
+
+# Node.js dependencies (if using npm/yarn)
+node_modules/
+
+# IDE files
+*.idea/
+*.vscode/
+
+# Backup and other misc files
+*.bak
+*.zip
+*.sql
