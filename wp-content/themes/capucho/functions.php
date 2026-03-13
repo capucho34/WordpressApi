@@ -70,4 +70,15 @@ function capucho_widget_areas() {
 
 add_action('widgets_init', 'capucho_widget_areas');
 
+function capucho_movies_post_type() {
+    $args = [
+        'public' => true,
+        'label'  => 'Movies',
+        'supports' => ['title', 'editor', 'thumbnail', 'custom-fields'],
+    ];
+    register_post_type('movies', $args);
+}
+add_action('init', 'capucho_movies_post_type');
     ?>
+
+    
