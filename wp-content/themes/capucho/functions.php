@@ -1,4 +1,4 @@
-    <?php
+<?php
     function capucho_support() {
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
@@ -70,4 +70,4 @@ function capucho_widget_areas() {
 
 add_action('widgets_init', 'capucho_widget_areas');
 
-    ?>
+?>
