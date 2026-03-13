@@ -1,12 +1,12 @@
 # WordPress core
-#/wp-admin/
-#/wp-includes/
+/wp-admin/
+/wp-includes/
 /wp-content/upgrade/
 /wp-content/cache/
 /wp-content/backups/
 
 # Uploaded files (optional to track)
-#/wp-content/uploads/
+/wp-content/uploads/
 
 # Configuration
 #wp-config.php
@@ -19,9 +19,6 @@ Thumbs.db
 # Logs and temporary files
 *.log
 *.tmp
-
-# Composer dependencies (if using Composer)
-vendor/
 
 # Node.js dependencies (if using npm/yarn)
 node_modules/
