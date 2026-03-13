@@ -42,18 +42,18 @@
 
     add_action('wp_enqueue_scripts', 'capucho_register_scripts');
 
-function capucho_widget_areas() {
-    register_sidebar(
-        array(
-            'name'          => 'Sidebar area', 
-            'id'            => 'sidebar-1',  
-            'description'   => 'Sidebar Widget area',
-            'before_title'  => '',   
-            'after_title'   => '',
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-        )
-    );
+    function capucho_widget_areas() {
+        register_sidebar(
+            array(
+                'name'          => 'Sidebar area', 
+                'id'            => 'sidebar-1',  
+                'description'   => 'Sidebar Widget area',
+                'before_title'  => '',   
+                'after_title'   => '',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+            )
+        );
 
     register_sidebar(
         array(
@@ -68,6 +68,16 @@ function capucho_widget_areas() {
     );
 }
 
-add_action('widgets_init', 'capucho_widget_areas');
+    add_action('widgets_init', 'capucho_widget_areas');
 
+    function capucho_movies_post_type() {
+        $args = [
+            'public' => true,
+            'label'  => 'Movies',
+            'supports' => ['title', 'editor', 'thumbnail', 'custom-fields'],
+        ];
+        register_post_type('movies', $args);
+    }
+
+    add_action('init', 'capucho_movies_post_type');
 ?>
