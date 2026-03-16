@@ -79,7 +79,8 @@ define('WP_MEMORY_LIMIT', '256M');
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-
+define('SCRIPT_DEBUG', true);
+define('CONCATENATE_SCRIPTS', false);
 
 /* That's all, stop editing! Happy publishing. */
 
