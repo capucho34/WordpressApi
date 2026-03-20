@@ -1,15 +1,5 @@
-# WordPress core
-/wp-admin/
-/wp-includes/
-/wp-content/upgrade/
-/wp-content/cache/
-/wp-content/backups/
-
-# Uploaded files (optional to track)
-/wp-content/uploads/
-
 # Configuration
-#wp-config.php
+# wp-config.php
 wp-config-sample.php
 
 # OS generated files

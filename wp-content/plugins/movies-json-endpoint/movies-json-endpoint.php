@@ -10,7 +10,7 @@ add_action('rest_api_init', function () {
     register_rest_route('custom/v1', '/movies', [
         'methods'  => 'GET',
         'callback' => 'get_movies',
-        'permission_callback' => '__return_true', // <--- добавлено
+        'permission_callback' => '__return_true',
     ]);
 });
 
@@ -34,7 +34,9 @@ function get_movies() {
             'director' => get_post_meta(get_the_ID(), 'director', true), 
             'rating'   => get_post_meta(get_the_ID(), 'rating', true),
             'image'    => get_the_post_thumbnail_url(get_the_ID(), 'full'),
-        ];
+            'genre'    => get_post_meta(get_the_ID(), 'genre', true), 
+            'duration' => get_post_meta(get_the_ID(), 'duration', true), 
+        ];  
     }
 
     wp_reset_postdata();
