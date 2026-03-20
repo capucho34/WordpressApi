@@ -1,4 +1,25 @@
 <?php
+
+/*
+|--------------------------------------------------------------------------
+| Load environment config FIRST
+|--------------------------------------------------------------------------
+*/
+
+if (defined('WP_ENV') && WP_ENV === 'production') {
+    require __DIR__ . '/config/config.production.php';
+} else {
+    require __DIR__ . '/config/config.local.php';
+}
+
+/*
+|--------------------------------------------------------------------------
+| Shared global config below
+|--------------------------------------------------------------------------
+*/
+
+
+
 /**
  * The base configuration for WordPress
  *
@@ -18,12 +39,6 @@
  * @package WordPress
  */
 
-// ** Database settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wordpressapi'); // имя базы
-define('DB_USER', 'root');         // пользователь MySQL
-define('DB_PASSWORD', '');         // пароль, если был
-define('DB_HOST', 'localhost');
 /**#@+
  * Authentication unique keys and salts.
  *

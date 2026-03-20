@@ -1,6 +1,11 @@
 # Configuration
+wp-content/cache/
+wp-content/upgrade/
+
 # wp-config.php
 wp-config-sample.php
+config/config.local.php
+config/config.production.php
 
 # OS generated files
 .DS_Store
